@@ -7,9 +7,9 @@
     "start": "per-env",
     "start:production": "npm run -s serve",
     "start:development": "npm run -s dev",
-    "build": "preact build",
-    "serve": "preact build && preact serve",
-    "dev": "preact watch",
+    "build": "preact build --template template.html",
+    "serve": "preact build --template template.html && preact serve",
+    "dev": "preact watch --template template.html",
     "lint": "eslint src",
     "test": "jest"
   },
@@ -29,7 +29,7 @@
     "preact-render-spy": "^1.2.1"
   },
   "dependencies": {
-    "pdfjs": "^2.3.0",
+    "pdfjs-dist": "^2.0.943",
     "preact": "^8.2.6",
     "preact-compat": "^3.17.0",
     "preact-render-to-string": "^4.1.0",
