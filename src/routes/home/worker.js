@@ -4,12 +4,7 @@ const workercode = () => {
 		const rawContent = e.data.items;
 		let filteredContent = '';
 		rawContent.map((item) => {
-			if (item.str === '') {
-				return;
-      }
-      else {
-        filteredContent += item.str;
-      }
+			filteredContent += item.str;
 		});
 		self.postMessage(filteredContent);
 	};

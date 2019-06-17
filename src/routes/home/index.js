@@ -4,13 +4,40 @@ import style from './style';
 
 export default class Home extends Component {
 
+	togglePlay = e => {
+		console.log(this.state.isPlaying);
+		this.setState({
+			isPlaying: !this.state.isPlaying
+		}, () => {
+			if (this.state.isPlaying) {
+				this.state.synth.pause();
+			}
+			else {
+				this.state.synth.resume();
+			}
+		});
+	};
+
+	stopSpeech = () => {
+		this.state.synth.cancel();
+	};
+
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			synth: window.speechSynthesis,
+			isPlaying: false
+		};
+	}
+
 	componentDidMount() {
 		const myWorker = new Worker(worker);
 		
 		myWorker.onmessage = (e) => {
-			const synth = window.speechSynthesis;
+			// console.log(e.data);
 			const sayThis = new SpeechSynthesisUtterance(e.data);
-			synth.speak(sayThis);
+			this.state.synth.speak(sayThis);
 		};
 		const pdfjsLib = window['pdfjs-dist/build/pdf'];
 		let loadingTask = pdfjsLib.getDocument('./assets/cover-letter.pdf');
@@ -29,7 +56,8 @@ export default class Home extends Component {
 			<div class={style.home}>
 				<h1>Home</h1>
 				<p>This is the Home component.</p>
-				<a href="../../../node_modules/pdfjs-dist/build/pdf.worker.js">lol</a>
+				<button onClick={this.togglePlay}>Pause podcast</button>
+				<button onClick={this.stopSpeech}>Stop podcast</button>
 			</div>
 		);
 	}
