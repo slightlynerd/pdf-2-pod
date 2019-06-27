@@ -1,12 +1,12 @@
 const workercode = () => {
 
 	self.onmessage = function(e) {
-		const rawContent = e.data.items;
+		const rawContent = e.data.text.items;
 		let filteredContent = '';
 		rawContent.map((item) => {
 			filteredContent += item.str;
 		});
-		self.postMessage(filteredContent);
+		self.postMessage({ text: filteredContent, pageNumber: e.data.pageNumber });
 	};
 };
 

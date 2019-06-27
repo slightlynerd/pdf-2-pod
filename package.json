@@ -29,7 +29,6 @@
     "preact-render-spy": "^1.2.1"
   },
   "dependencies": {
-    "pdfjs-dist": "^2.0.943",
     "preact": "^8.2.6",
     "preact-compat": "^3.17.0",
     "preact-render-to-string": "^4.1.0",

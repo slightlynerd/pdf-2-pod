@@ -1,0 +1,32 @@
+.main {
+	padding: 38px 0;
+	min-height: 100%;
+	width: 100%;
+	background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"><path d="M1 2V0h1v1H0v1z" fill-opacity=".025"/></svg>');
+  background-size: auto;
+	background-size: 20px 20px;
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 20px;
+	background: #ffffff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: #f6f1ff;
+}
+.btn {
+	background-color: #673AB7;
+	color: white;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	border-radius: 8px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	padding: 10px 20px;
+	margin: 10px 5px;
+}
