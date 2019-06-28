@@ -51,7 +51,7 @@ export default class Intro extends Component {
 					</div>
 				</div>
 				<div class={style.footer}>
-					<p><Link class={style.link} href="">View the code</Link> | <Link class={style.link} href="">Report bug</Link></p>
+					<p><Link class={style.link} href="https://github.com/slightlynerd/pdf-2-pod">View the code</Link> | <Link class={style.link} href="https://github.com/slightlynerd/pdf-2-pod/issues">Report bug</Link></p>
 				</div>
 			</div>
 		);
