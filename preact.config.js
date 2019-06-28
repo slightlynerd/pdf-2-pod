@@ -25,10 +25,16 @@ export default (config, env, helpers) => {
 			'build/**.css',
 			'build/**.json'
 		],
-		runtimeCaching: [{
-			urlPattern: /^https:\/\/unpkg\.com\/|^https:\/\/fonts\.google\.com\//,
-			handler: 'cacheFirst'
-		}],
+		runtimeCaching: [
+			{
+				urlPattern: /^https:\/\/unpkg\.com\//,
+				handler: 'cacheFirst'
+			},
+			{
+				urlPattern: /^https:\/\/fonts\.google\.com\//,
+				handler: 'cacheFirst'
+			}
+		],
 		stripPrefix: 'build/',
 		minify: true,
 		navigateFallback: 'index.html',
