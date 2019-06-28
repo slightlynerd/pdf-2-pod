@@ -12,6 +12,9 @@
 	display: flex;
 	-webkit-display: flex;
 }
+.heading {
+	font-size: 36px;
+}
 .link {
 	color: #D81B60;
 	font-style: italic;

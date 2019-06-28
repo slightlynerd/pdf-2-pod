@@ -46,7 +46,7 @@ export default class Intro extends Component {
 							<img src="../../assets/logo-81x81.png" />
 						</div>
 
-						<h2>Drag and Drop or <span class={style.file} onClick={this.handleSelect}>Select a pdf</span></h2>
+						<h2 class={style.heading}>Drag and Drop or <span class={style.file} onClick={this.handleSelect}>Select a pdf</span></h2>
 
 					</div>
 				</div>
