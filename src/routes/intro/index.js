@@ -1,5 +1,5 @@
 import { h, Component } from 'preact';
-import { Link, route } from 'preact-router';
+import { route } from 'preact-router';
 import style from './style';
 
 export default class Intro extends Component {
@@ -51,7 +51,7 @@ export default class Intro extends Component {
 					</div>
 				</div>
 				<div class={style.footer}>
-					<p><Link class={style.link} href="https://github.com/slightlynerd/pdf-2-pod">View the code</Link> | <Link class={style.link} href="https://github.com/slightlynerd/pdf-2-pod/issues">Report bug</Link></p>
+					<p><a class={style.link} href="https://github.com/slightlynerd/pdf-2-pod">View the code</a> | <a class={style.link} href="https://github.com/slightlynerd/pdf-2-pod/issues">Report bug</a></p>
 				</div>
 			</div>
 		);
