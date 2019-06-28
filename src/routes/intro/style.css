@@ -13,11 +13,11 @@
 	-webkit-display: flex;
 }
 .link {
-	color: #673AB7;
+	color: #D81B60;
 	font-style: italic;
 }
 .file {
-	color: #673AB7;
+	color: #D81B60;
 	text-decoration: underline;
 	cursor: pointer;
 }

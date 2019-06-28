@@ -6,11 +6,6 @@ import style from './style';
 
 export default class Podcast extends Component {
 
-	state = {
-		synth: window.speechSynthesis,
-		fileName: localStorage.getItem('fileName')
-	};
-
 	// convert base64 into uint8 array
 	convertDataURIToBinary(dataURI) {
 		const BASE64_MARKER = ';base64,';
@@ -56,6 +51,15 @@ export default class Podcast extends Component {
 		}
 	}
 
+	constructor() {
+		super();
+		this.state = {
+			synth: window.speechSynthesis,
+			fileName: localStorage.getItem('fileName'),
+			playing: false
+		};
+	}
+
 	componentDidMount() {
 		if (!localStorage.getItem('fileData')) route('/');
 
@@ -76,6 +80,18 @@ export default class Podcast extends Component {
 		return (
 			<div class={style.main}>
 				<Header title={this.state.fileName} />
+				<div id={style.smoke}>
+					<span class={style.s0} />
+					<span class={style.s1} />
+					<span class={style.s2} />
+					<span class={style.s3} />
+					<span class={style.s4} />
+					<span class={style.s5} />
+					<span class={style.s6} />
+					<span class={style.s7} />
+					<span class={style.s8} />
+					<span class={style.s9} />
+				</div>
 				<div class={style.footer}>
 					<button class={style.btn} onClick={this.playSpeech}>Play</button>
 					<button class={style.btn} onClick={this.pauseSpeech}>Pause</button>

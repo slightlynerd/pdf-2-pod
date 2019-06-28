@@ -43,7 +43,7 @@ export default class Intro extends Component {
 					<div class={style.column}>
 
 						<div class={style.circle}>
-							<img src="../../assets/icons/favicon-32x32.png" width="64" height="64" />
+							<img src="../../assets/logo-81x81.png" />
 						</div>
 
 						<h2>Drag and Drop or <span class={style.file} onClick={this.handleSelect}>Select a pdf</span></h2>
