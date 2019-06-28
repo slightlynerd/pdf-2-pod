@@ -7,8 +7,8 @@
     "start": "per-env",
     "start:production": "npm run -s serve",
     "start:development": "npm run -s dev",
-    "build": "preact build --template template.html --no-prerender && gulp",
-    "serve": "preact build --template template.html && preact serve",
+    "build": "preact build --template template.html --no-prerender",
+    "serve": "preact build --template template.html --no-prerender && preact serve",
     "dev": "preact watch --template template.html",
     "lint": "eslint src",
     "test": "jest"
@@ -29,6 +29,7 @@
     "jest": "^24.8.0",
     "per-env": "^1.0.2",
     "preact-cli": "^2.2.1",
+    "preact-cli-sw-precache": "^1.0.3",
     "preact-render-spy": "^1.2.1"
   },
   "dependencies": {
