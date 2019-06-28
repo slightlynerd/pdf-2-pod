@@ -7,7 +7,7 @@
     "start": "per-env",
     "start:production": "npm run -s serve",
     "start:development": "npm run -s dev",
-    "build": "preact build --template template.html --no-prerender",
+    "build": "preact build --template template.html --no-prerender && gulp",
     "serve": "preact build --template template.html && preact serve",
     "dev": "preact watch --template template.html",
     "lint": "eslint src",
@@ -20,9 +20,11 @@
     "build/*"
   ],
   "devDependencies": {
+    "copy-webpack-plugin": "^5.0.3",
     "eslint": "^4.9.0",
     "eslint-config-synacor": "^2.0.2",
     "fast-async": "^6.3.8",
+    "gulp": "^4.0.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "per-env": "^1.0.2",
