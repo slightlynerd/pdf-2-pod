@@ -27,7 +27,7 @@
 		}) %>
 		<script defer src="<%= htmlWebpackPlugin.files.chunks['bundle'].entry %>"></script>
     <script>window.fetch||document.write('<script src="<%= htmlWebpackPlugin.files.chunks["polyfills"].entry %>"><\/script>')</script>
-    <script src="<%= htmlWebpackPlugin.files.publicPath %>pdf.js" type="text/javascript"></script>
-		<script src="<%= htmlWebpackPlugin.files.publicPath %>pdf.worker.js" type="text/javascript"></script>
+    <script src="<%= htmlWebpackPlugin.files.publicPath %>pdf.js"></script>
+		<script src="<%= htmlWebpackPlugin.files.publicPath %>pdf.worker.js"></script>
 	</body>
 </html>
