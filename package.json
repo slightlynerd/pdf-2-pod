@@ -7,7 +7,7 @@
     "start": "per-env",
     "start:production": "npm run -s serve",
     "start:development": "npm run -s dev",
-    "build": "preact build --template template.html",
+    "build": "preact build --template template.html --no-prerender",
     "serve": "preact build --template template.html && preact serve",
     "dev": "preact watch --template template.html",
     "lint": "eslint src",
@@ -22,14 +22,14 @@
   "devDependencies": {
     "eslint": "^4.9.0",
     "eslint-config-synacor": "^2.0.2",
+    "fast-async": "^6.3.8",
     "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
     "per-env": "^1.0.2",
-    "jest": "^21.2.1",
-    "preact-cli": "^2.1.0",
+    "preact-cli": "^2.2.1",
     "preact-render-spy": "^1.2.1"
   },
   "dependencies": {
-    "pdfjs-dist": "^2.0.943",
     "preact": "^8.2.6",
     "preact-compat": "^3.17.0",
     "preact-render-to-string": "^4.1.0",
