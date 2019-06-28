@@ -26,7 +26,7 @@ export default (config, env, helpers) => {
 			'build/**.json'
 		],
 		runtimeCaching: [{
-			urlPattern: /^https:\/\/unpkg\.com\//,
+			urlPattern: /^https:\/\/unpkg\.com\/|^https:\/\/fonts\.google\.com\//,
 			handler: 'cacheFirst'
 		}],
 		stripPrefix: 'build/',
