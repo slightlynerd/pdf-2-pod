@@ -4,7 +4,7 @@ import style from './style';
 
 const Header = ({ title }) => (
 	<header class={style.header}>
-		<Link href="/"><img src="../../assets/arrow-left-solid.svg" width="30" height="30" /></Link>
+		<Link href="/"><img src="../../assets/arrow-left-solid.svg" width="28" height="24" /></Link>
 		<h1>{title}</h1>
 	</header>
 );
