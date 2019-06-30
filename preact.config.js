@@ -19,7 +19,7 @@ export default (config, env, helpers) => {
 		staticFileGlobs: [
 			'build/assets/**.svg',
 			'build/assets/**.png',
-			'build/assets/favicon.ico',
+			'build/assets/**.ico',
 			'build/**.html',
 			'build/**.js',
 			'build/**.css',
