@@ -3,6 +3,9 @@ import { route } from 'preact-router';
 import style from './style';
 
 export default class Intro extends Component {
+	state = {
+		itemDragged: null
+	};
 	// create base64 array and store in localstorage
 	createBase64(file) {
 		const fileReader = new FileReader();
@@ -29,16 +32,23 @@ export default class Intro extends Component {
 	handleDrop = (e) => {
 		e.preventDefault();
 		this.createBase64(e.dataTransfer.files[0]);
+		this.setState({ itemDragged: null });
 	};
 
 	allowDrop = (e) => {
 		e.preventDefault();
+		this.setState({ itemDragged: 'dragged' });
+	};
+
+	cancelDrag = (e) => {
+		e.preventDefault();
+		this.setState({ itemDragged: null });
 	};
 
 	// Note: `user` comes from the URL, courtesy of our router
 	render() {
 		return (
-			<div class={style.main} onDrop={this.handleDrop} onDragOver={this.allowDrop}>
+			<div class={`${style.main} ${this.state.itemDragged ? style.dragged : style.undragged}`} onDrop={this.handleDrop} onDragOver={this.allowDrop} onDragExit={this.cancelDrag}>
 				<div class={style.row}>
 					<div class={style.column}>
 
