@@ -48,7 +48,7 @@ export default class Intro extends Component {
 	// Note: `user` comes from the URL, courtesy of our router
 	render() {
 		return (
-			<div class={`${style.main} ${this.state.itemDragged ? style.dragged : style.undragged}`} onDrop={this.handleDrop} onDragOver={this.allowDrop} onDragExit={this.cancelDrag}>
+			<div class={`${style.main} ${this.state.itemDragged ? style.dragged : style.undragged}`} onDrop={this.handleDrop} onDragOver={this.allowDrop} onDragExit={this.cancelDrag} onDragLeave={this.cancelDrag}>
 				<div class={style.row}>
 					<div class={style.column}>
 
