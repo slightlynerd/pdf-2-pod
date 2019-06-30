@@ -2,15 +2,24 @@
 	padding: 38px 50px;
 	min-height: 100%;
 	width: 100%;
-	background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"><path d="M1 2V0h1v1H0v1z" fill-opacity=".025"/></svg>');
-  background-size: auto;
-	background-size: 20px 20px;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
 	vertical-align: middle;
 	display: flex;
 	-webkit-display: flex;
+}
+.main.dragged {
+	border: 2px dashed #D81B60;
+	background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"><path d="M1 2V0h1v1H0v1z" fill-opacity=".075"/></svg>');
+	background-size: auto;
+	background-size: 20px 20px;
+}
+.main.undragged {
+	border: none;
+	background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"><path d="M1 2V0h1v1H0v1z" fill-opacity=".025"/></svg>');
+  background-size: auto;
+	background-size: 20px 20px;
 }
 .heading {
 	font-size: 36px;

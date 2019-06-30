@@ -36,8 +36,8 @@ export default class Podcast extends Component {
 
 	async readPDF(data) {
 		const pdfjsLib = window['pdfjs-dist/build/pdf'];
-		const myWorker = new Worker(worker);
-		myWorker.onmessage = (e) => {
+		this.state.myWorker = new Worker(worker);
+		this.state.myWorker.onmessage = (e) => {
 			const sayThis = new SpeechSynthesisUtterance(`Page ${e.data.pageNumber}. ` + e.data.text);
 			this.state.synth.speak(sayThis);
 		};
@@ -47,7 +47,7 @@ export default class Podcast extends Component {
 		for (let i = 1; i <= doc.numPages; i++) {
 			const page = await doc.getPage(i);
 			const pageText = await page.getTextContent();
-			myWorker.postMessage({ text: pageText, pageNumber: i });
+			this.state.myWorker.postMessage({ text: pageText, pageNumber: i });
 		}
 	}
 
@@ -56,7 +56,8 @@ export default class Podcast extends Component {
 		this.state = {
 			synth: window.speechSynthesis,
 			fileName: localStorage.getItem('fileName'),
-			playing: false
+			playing: false,
+			myWorker: null
 		};
 	}
 
@@ -71,6 +72,7 @@ export default class Podcast extends Component {
 	}
 
 	componentWillUnmount() {
+		this.state.myWorker.terminate();
 		this.state.synth.cancel();
 		localStorage.removeItem('fileData');
 		localStorage.removeItem('fileName');
