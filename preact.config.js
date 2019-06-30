@@ -31,7 +31,7 @@ export default (config, env, helpers) => {
 				handler: 'cacheFirst'
 			},
 			{
-				urlPattern: /https:\/\/fonts.google.com\//,
+				urlPattern: /^https:\/\/google\.com\//,
 				handler: 'cacheFirst'
 			}
 		],
