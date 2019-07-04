@@ -4,7 +4,7 @@
 
 PDF2POD is a PDF file reader that takes any pdf document, converts it to text and reads the text aloud.
 
-You can see a live demo [here](http://pdf-2-pod.netlify.com). There is also find the article that explains the design process [here](http://www.slightlynerd.com/journal/1561984220383/voice-enabled-web-apps--introduction-to-the-speech-synthesis-api).
+You can see a live demo [here](http://pdf-2-pod.netlify.com). The article that explains the design process can be found [here](http://www.slightlynerd.com/journal/1561984220383/voice-enabled-web-apps--introduction-to-the-speech-synthesis-api).
 
 ## Installation
 
