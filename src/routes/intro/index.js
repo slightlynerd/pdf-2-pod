@@ -8,6 +8,11 @@ export default class Intro extends Component {
 	};
 	// create base64 array and store in localstorage
 	createBase64(file) {
+		if (file.type !== 'application/pdf') {
+			// eslint-disable-next-line no-alert
+			alert('Please select a pdf file');
+			return;
+		}
 		const fileReader = new FileReader();
 		fileReader.readAsDataURL(file);
 		fileReader.addEventListener('load', (e) => {
