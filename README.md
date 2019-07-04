@@ -22,4 +22,4 @@ You can see a live demo [here](http://pdf-2-pod.netlify.com). There is also find
 
 ## License
 
-[MIT](License.md)
+[MIT](LICENSE.md)
